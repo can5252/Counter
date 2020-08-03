@@ -1,0 +1,21 @@
+.decrease {
+    display: inline-block;
+}
+
+.dec__button {
+    height: 2.5rem;
+    width: 8rem;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    cursor: pointer;
+    background-color: #5db1f8;
+    color: white;
+    letter-spacing: 0.2rem;
+    font-family: "Indie Flower", cursive;
+}
+
+.dec__button:active {
+    background-color: #cae3f9;
+    color: #5db1f8;
+}
