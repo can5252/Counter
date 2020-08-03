@@ -1,12 +1,24 @@
 import React from "react";
 import '../Style/Reset.css'
+import {connect} from 'react-redux'
 
-export default function Reset() {
+function Reset(props) {
+    const {reset} = props
     return(
         <div className={'reset'}>
-            <button className={'res__button'}>
+            <button onClick={reset} className={'res__button'}>
                 {'RESET'}
             </button>
         </div>
     )
 }
+
+function mapDispatchToProps(dispatch) {
+    return{
+        reset : () => dispatch({
+            type: 'RESET',
+        })
+    }
+}
+
+export default connect(null , mapDispatchToProps)(Reset)

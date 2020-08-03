@@ -1,20 +1,18 @@
 import React from "react";
-import '../Style/Count.css';
-import {connect} from 'react-redux'
+import "../Style/Count.css";
+import { connect } from "react-redux";
 
- function Count(props) {
-    const { count } = props
-    return(
-        <div className={'count'}>
-            {count}
-        </div>
-    )
+function Count(props) {
+  const { count } = props;
+  console.log(props)
+  return <div className={"count"}>{count}</div>;
 }
 
 function mapStateToProps(state) {
-    return{
-        count : state.count
-    }
+  console.log(state);
+  return {
+    count : state
+  };
 }
 
-export default connect(mapStateToProps , null)(Count)
+export default connect(mapStateToProps, null)(Count);
